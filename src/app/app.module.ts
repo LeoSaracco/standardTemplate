@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//Rutes
+//Routes
 import { APP_ROUTING } from './app.routes';
+
+//Angular Material
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 //Services
 
 // Components
@@ -12,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './auth/login/login.component';
 import { PagesComponent } from './components/pages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,9 @@ import { PagesComponent } from './components/pages.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    APP_ROUTING
+    APP_ROUTING,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
